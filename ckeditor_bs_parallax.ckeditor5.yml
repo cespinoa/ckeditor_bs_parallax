@@ -1,0 +1,32 @@
+ckeditor_bs_parallax_parallax:
+  # Configuration that will be sent to CKEditor 5 JavaScript plugins.
+  ckeditor5:
+    plugins:
+      - bootstrapParallax.BootstrapParallax
+    config:
+      bootstrapParallax:
+        openDialog:
+          func:
+            name: Drupal.ckeditor5.openDialog
+            invoke: false
+        dialogSettings:
+          height: 75%
+          width: 75%
+          dialogClass: parallax-widget-modal
+          title: Parallax Settings
+
+  # Configuration that will be used directly by Drupal.
+  drupal:
+    label: Bootstrap Parallax
+    # The library loaded while using the editor.
+    library: ckeditor_bs_parallax/cke5.bsparallax
+    # The library loaded when configuring the text format using this plugin.
+    admin_library: ckeditor_bs_parallax/cke5.admin
+    class: Drupal\ckeditor_bs_parallax\Plugin\CKEditor5Plugin\BsParallax
+    toolbar_items:
+      bootstrapParallax:
+        label: Bootstrap Parallax
+    # If the plugin does not provide elements, set this as
+    # `elements: false`
+    elements:
+      - <div>

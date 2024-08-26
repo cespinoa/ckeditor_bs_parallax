@@ -1,0 +1,12 @@
+name: CKEditor Bootstrap Parallax
+type: module
+description: Ckeditor plugin for adding Bootstrap parallax inline
+core_version_requirement: ^9.3 || ^10 || ^11
+package: CKEditor
+configure: ckeditor_bs_parallax.settings
+dependencies:
+  - drupal:editor
+  - drupal:bootstrap_toolbox
+  - drupal:bootstrap_toolbox_carousel
+
+

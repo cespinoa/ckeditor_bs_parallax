@@ -1,0 +1,6 @@
+{
+    "name": "drupal/ckeditor_bs_parallax",
+    "description": "Allows creating a parallax section within CKEditor using Bootstrap syntax.",
+    "type": "drupal-module",
+    "license": "GPL-2.0-or-later"
+}

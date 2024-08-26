@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * @file
+ * Contains ckeditor_bs_parallax.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function ckeditor_bs_parallax_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the ckeditor_bs_parallax module.
+    case 'help.page.ckeditor_bs_parallax':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Ckeditor plugin for Bootstrap Parallax') . '</p>';
+      $output .= '<p>' . t('You can find more information at ') . '<a href="https://www.drupal.org/project/bootstrap_toolbox">Bootstrap Toolbox</a> ' . t('page') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+

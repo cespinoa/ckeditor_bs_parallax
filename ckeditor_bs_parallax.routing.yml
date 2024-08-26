@@ -1,0 +1,8 @@
+ckeditor_bs_parallax.dialog:
+  path: '/ckeditor_bs_parallax/dialog/{editor}'
+  defaults:
+    _form: '\Drupal\ckeditor_bs_parallax\Form\ParallaxDialog'
+    _title: 'Parallax Dialog'
+  requirements:
+    _permission: 'access content'
+
