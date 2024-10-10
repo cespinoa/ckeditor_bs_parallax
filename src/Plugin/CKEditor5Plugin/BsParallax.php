@@ -66,19 +66,23 @@ class BsParallax extends CKEditor5PluginDefault implements ContainerFactoryPlugi
    * {@inheritdoc}
    */
   public function getDynamicPluginConfig(array $static_plugin_config, EditorInterface $editor): array {
-    $dynamic_plugin_config = $static_plugin_config;
+    $dynamicPluginConfig = $static_plugin_config;
 
-    $dynamic_plugin_config['bootstrapParallax']['dialogURL'] = Url::fromRoute('ckeditor_bs_parallax.dialog')
-      ->setRouteParameter('editor', $editor->getFilterFormat()->id())
-      ->toString(TRUE)
-      ->getGeneratedUrl();
+    $filter_format = $editor->getFilterFormat();
 
-    $dynamic_plugin_config['bootstrapParallax'] = array_merge(
-      $dynamic_plugin_config['bootstrapParallax'],
+    if ($filter_format !== null) {
+      $dynamicPluginConfig['bootstrapParallax']['dialogURL'] = Url::fromRoute('ckeditor_bs_parallax.dialog')
+        ->setRouteParameter('editor', $filter_format->id())
+        ->toString(TRUE)
+        ->getGeneratedUrl();
+    }
+
+    $dynamicPluginConfig['bootstrapParallax'] = array_merge(
+      $dynamicPluginConfig['bootstrapParallax'],
       $this->getConfiguration()
     );
 
-    return $dynamic_plugin_config;
+    return $dynamicPluginConfig;
   }
 
   /**

@@ -24,3 +24,11 @@ function ckeditor_bs_parallax_help($route_name, RouteMatchInterface $route_match
   }
 }
 
+
+/**
+ * Implements hook_page_attachments().
+ */
+function ckeditor_bs_parallax_page_attachments(array &$attachments) {
+  // Attach the library globally.
+  $attachments['#attached']['library'][] = 'bt_parallax/bt_parallax_image';
+}

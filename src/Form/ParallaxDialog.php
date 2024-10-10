@@ -83,14 +83,13 @@ class ParallaxDialog extends FormBase {
 
     $input = $form_state->getUserInput();
     
+    $imageEntity = NULL;
     
     if (!empty($input['editor_object'])) {
         $settings = $input['editor_object'];
         if(!empty($settings['image_id'])){
           $imageEntity = $this->utilityService->getEntityByTypeAndId('media',$settings['image_id']) ?? NULL;
-        } else {
-          $imageEntity = NULL;
-        }
+        } 
     } else {
         $settings = [
           'image' => NULL,

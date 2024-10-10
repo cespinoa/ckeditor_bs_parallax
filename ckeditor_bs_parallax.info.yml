@@ -7,6 +7,4 @@ configure: ckeditor_bs_parallax.settings
 dependencies:
   - drupal:editor
   - drupal:bootstrap_toolbox
-  - drupal:bootstrap_toolbox_carousel
-
-
+  - drupal:bt_parallax
